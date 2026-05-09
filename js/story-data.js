@@ -142,7 +142,7 @@ S.ch3_s1 = { chapter:3, bg:'bg_home.jpg', dialogues:[
   { text:'大操大办："算了，就这一次，别让老人家不高兴了。"', next:'ch3_lavish', score:-12 }
 ], regulation:{ title:'生活纪律', article:'移风易俗', content:'严格家教家风，推进移风易俗，引导广大党员干部带头抵制高额彩礼、人情攀比、厚葬薄养等不良习俗，反对特权思想和特权现象，以优良党风引领企业风气、带动社风民风向上向善。' }};
 
-S.ch3_simple = { chapter:3, bg:'bg_wedding.jpg', dialogues:[
+S.ch3_simple = { chapter:3, bg:'bg_wedding_modest.jpg', dialogues:[
   { text:'肖明专门回了趟老家，耐心地和母亲做了一下午的工作。', type:'narration' },
   { speaker:'肖明', text:'妈，小杰的婚礼咱们简办。彩礼意思一下就行，酒席就办八桌，请至亲好友。面子不是靠排场撑的，是靠人品挣的。', type:'dialogue' },
   { speaker:'母亲', text:'（虽然有些不情愿）你说的也有道理……那就听你的吧。', type:'dialogue' },
@@ -172,7 +172,7 @@ S.ch3_frugal = { chapter:3, bg:'bg_restaurant_simple.jpg', dialogues:[
   { text:'一个小时就谈完了合作框架，双方都很满意。', type:'narration' }
 ], next:'ch4_s1' };
 
-S.ch3_extravagant = { chapter:3, bg:'bg_restaurant.jpg', dialogues:[
+S.ch3_extravagant = { chapter:3, bg:'bg_restaurant_luxurious.jpg', dialogues:[
   { text:'锦绣华庭，龙凤包厢。满桌的鲍鱼龙虾，红酒是进口的拉菲。', type:'narration' },
   { text:'酒过三巡，业务只聊了十分钟，剩下的时间都在觥筹交错。这一顿饭花了一万二。', type:'narration' },
   { speaker:'赵磊', text:'（拿着发票）老肖，这发票我分三次报，挂到不同的项目费用里。', type:'dialogue' },
