@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>清风正道 — 廉洁从业多结局剧情游戏</title>
+<meta name="description" content="一款围绕作风建设与廉洁纪律的多结局互动剧情教育游戏">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="bg-layer"></div>
+<div id="vignette"></div>
+<div id="grain"></div>
+
+<div id="title-screen" class="screen active">
+  <div class="title-content">
+    <div class="title-badge">廉洁从业 · 作风建设教育</div>
+    <h1 class="title-main">清风<span class="title-accent">正道</span></h1>
+    <p class="title-sub">每一步选择，决定你的命运</p>
+    <div class="title-desc">
+      <p>你是<strong>肖明</strong>，刚提拔的某国有保险公司综合管理部副总经理。</p>
+      <p>在接下来的日子里，你将面对数据造假、形式主义、人情围猎与利益诱惑。</p>
+      <p>你的每一个决定，都将改写你的人生轨迹。</p>
+    </div>
+    <div class="title-controls">
+      <p class="control-hint">空格/回车 = 推进剧情 &nbsp;|&nbsp; 数字键 = 选择选项</p>
+    </div>
+    <button id="btn-start" class="btn-cinematic">开 始 游 戏</button>
+  </div>
+</div>
+
+<div id="game-screen" class="screen">
+  <div id="hud">
+    <div id="hud-chapter">第一章</div>
+    <div id="hud-integrity">
+      <span class="integrity-label">廉洁指数</span>
+      <div class="integrity-bar"><div class="integrity-fill" id="integrity-fill"></div></div>
+      <span class="integrity-value" id="integrity-value">100</span>
+    </div>
+  </div>
+
+  <div id="speaker-area">
+    <div class="speaker-plate" id="speaker-plate">
+      <span class="speaker-icon" id="speaker-icon"></span>
+      <span class="speaker-name" id="speaker-name"></span>
+    </div>
+  </div>
+
+  <div id="dialogue-panel" class="hidden">
+    <div id="dialogue-text"></div>
+    <div id="advance-hint">▼ 空格键 / 回车键 继续</div>
+  </div>
+
+  <div id="choice-panel" class="hidden">
+    <div class="choice-title">— 做出你的选择 —</div>
+    <div id="choice-list"></div>
+  </div>
+
+  <div id="regulation-panel" class="hidden">
+    <div class="reg-header">
+      <span class="reg-icon">⚖</span>
+      <span class="reg-title" id="reg-title"></span>
+    </div>
+    <div class="reg-article" id="reg-article"></div>
+    <div class="reg-content" id="reg-content"></div>
+    <div class="reg-dismiss">按空格键继续</div>
+  </div>
+
+  <div id="chapter-transition" class="hidden">
+    <div class="ct-chapter" id="ct-chapter"></div>
+    <div class="ct-title" id="ct-title"></div>
+    <div class="ct-desc" id="ct-desc"></div>
+  </div>
+</div>
+
+<div id="ending-screen" class="screen">
+  <div class="ending-content">
+    <div class="ending-icon" id="ending-icon"></div>
+    <h2 class="ending-type" id="ending-type"></h2>
+    <p class="ending-title" id="ending-title"></p>
+    <div class="ending-story" id="ending-story"></div>
+    <div class="ending-stats">
+      <div class="stat"><span class="stat-label">最终廉洁指数</span><span class="stat-value" id="stat-integrity"></span></div>
+      <div class="stat"><span class="stat-label">正确抉择</span><span class="stat-value" id="stat-correct"></span></div>
+      <div class="stat"><span class="stat-label">涉及条例</span><span class="stat-value" id="stat-articles"></span></div>
+    </div>
+    <div class="ending-regulation" id="ending-regulation"></div>
+    <div class="ending-buttons">
+      <button class="btn-cinematic" id="btn-replay">重新开始</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/engine.js"></script>
+</body>
+</html>
