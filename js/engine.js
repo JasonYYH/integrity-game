@@ -12,6 +12,20 @@ class GameEngine {
     this.correctCount = 0;
     this.state = 'title';
     this._bind();
+    this._preloadImages();
+  }
+
+  _preloadImages() {
+    const images = new Set();
+    Object.values(storyScenes).forEach(scene => {
+      if (scene.bg && scene.bg.endsWith('.jpg')) images.add(scene.bg);
+    });
+    ['bg_ending_gold','bg_ending_good','bg_ending_warn','bg_ending_bad','bg_ending_worst']
+      .forEach(n => images.add(n + '.jpg'));
+    images.forEach(src => {
+      const img = new Image();
+      img.src = 'assets/images/' + src;
+    });
   }
 
   _bind() {
@@ -64,7 +78,7 @@ class GameEngine {
     this.dialogueIndex = 0;
 
     const bg = document.getElementById('bg-layer');
-    if (scene.bg.endsWith('.png') || scene.bg.endsWith('.webp')) {
+    if (scene.bg.endsWith('.jpg') || scene.bg.endsWith('.webp')) {
       bg.className = '';
       bg.style.backgroundImage = `url('assets/images/${scene.bg}')`;
     } else {
@@ -247,11 +261,11 @@ class GameEngine {
     setTimeout(() => audio.playSuccess(), 500);
     let ending;
     let bgImg;
-    if (this.score >= 95) { ending = endings.gold; bgImg = 'bg_ending_gold.png'; }
-    else if (this.score >= 80) { ending = endings.good; bgImg = 'bg_ending_good.png'; }
-    else if (this.score >= 60) { ending = endings.warn; bgImg = 'bg_ending_warn.png'; }
-    else if (this.score >= 40) { ending = endings.bad; bgImg = 'bg_ending_bad.png'; }
-    else { ending = endings.worst; bgImg = 'bg_ending_worst.png'; }
+    if (this.score >= 95) { ending = endings.gold; bgImg = 'bg_ending_gold.jpg'; }
+    else if (this.score >= 80) { ending = endings.good; bgImg = 'bg_ending_good.jpg'; }
+    else if (this.score >= 60) { ending = endings.warn; bgImg = 'bg_ending_warn.jpg'; }
+    else if (this.score >= 40) { ending = endings.bad; bgImg = 'bg_ending_bad.jpg'; }
+    else { ending = endings.worst; bgImg = 'bg_ending_worst.jpg'; }
 
     const bg = document.getElementById('bg-layer');
     bg.className = '';
