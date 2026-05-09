@@ -34,7 +34,7 @@ class GameEngine {
         audio.playClick();
         this.startGame();
     });
-    document.getElementById('btn-replay').addEventListener('click', () => location.reload());
+    document.getElementById('btn-replay').addEventListener('click', () => this.resetGame());
     document.addEventListener('keydown', (e) => this._onKey(e));
     // Touch support for mobile
     document.getElementById('dialogue-panel').addEventListener('click', () => {
@@ -56,6 +56,29 @@ class GameEngine {
       const n = parseInt(e.key);
       if (n >= 1 && n <= 3) this.selectChoice(n - 1);
     }
+  }
+
+  resetGame() {
+    audio.stopTheme();
+    clearInterval(this.typeTimer);
+    this.score = 100;
+    this.currentScene = null;
+    this.dialogueIndex = 0;
+    this.isTyping = false;
+    this.choicesMade = [];
+    this.correctCount = 0;
+    this.state = 'title';
+    document.getElementById('integrity-fill').style.width = '100%';
+    document.getElementById('integrity-fill').classList.remove('warn', 'danger');
+    document.getElementById('integrity-value').textContent = '100';
+    document.getElementById('choice-panel').classList.add('hidden');
+    document.getElementById('regulation-panel').classList.add('hidden');
+    document.getElementById('dialogue-panel').classList.add('hidden');
+    document.getElementById('chapter-transition').classList.add('hidden');
+    const bg = document.getElementById('bg-layer');
+    bg.className = '';
+    bg.style.backgroundImage = "url('assets/images/bg_title.jpg')";
+    this.showScreen('title-screen');
   }
 
   startGame() {
