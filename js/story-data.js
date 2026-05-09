@@ -46,7 +46,7 @@ S.ch1_s2 = { chapter:1, bg:'bg_meeting_wang.jpg', dialogues:[
   { text:'全盘配合："明白了王总，我重新做一版。"', next:'ch1_fake', score:-12 }
 ], regulation:{ title:'工作纪律', article:'整治弄虚作假', content:'着力纠治抓工作敷衍应付、报数据弄虚作假等问题。保险行业严禁虚假承保、虚假理赔、虚列费用、虚挂中介、虚构保费等"五虚"行为。' }};
 
-S.ch1_honest = { chapter:1, bg:'bg_office_xiao.jpg', dialogues:[
+S.ch1_honest = { chapter:1, bg:'bg_meeting_wang.jpg', dialogues:[
   { speaker:'王总', text:'（脸色阴沉）肖明，你刚上任就不给面子？', type:'dialogue' },
   { speaker:'肖明', text:'王总，我理解您的压力。但如果被总公司稽核查出数据造假，不是扣几分的问题，是要追责问责的。不如我们把真实情况摆出来，附上整改方案，反而显得我们有担当。', type:'dialogue' },
   { speaker:'王总', text:'（沉默了一会儿）……你说的也有道理。那就按你说的办吧。', type:'dialogue' }
@@ -64,7 +64,7 @@ S.ch1_fake = { chapter:1, bg:'bg_office_data.jpg', dialogues:[
   { text:'第二天，王总看到新报表后露出了满意的微笑。但肖明知道，这颗定时炸弹迟早会爆。', type:'narration' }
 ], next:'ch1_s3' };
 
-S.ch1_s3 = { chapter:1, bg:'bg_office_xiao.jpg', dialogues:[
+S.ch1_s3 = { chapter:1, bg:'bg_office_zhao.jpg', dialogues:[
   { text:'下午，肖明收到总公司发来的通知——要求各分公司在一周内报送12份专项材料，涵盖党建、合规、风控、客服等多个领域。', type:'narration' },
   { speaker:'赵磊', text:'（推门进来，苦笑）老肖，看到那个通知没？12份材料，一周交。我们部门刚忙完上个月的检查报告，又来了。', type:'dialogue' },
   { speaker:'肖明', text:'（翻看通知，发现其中有好几份材料内容重叠）这些材料里，有一半的数据口径都是重复的……', type:'thought' },
@@ -74,7 +74,7 @@ S.ch1_s3 = { chapter:1, bg:'bg_office_xiao.jpg', dialogues:[
   { text:'照搬转发："行吧，直接转下去，再加上我们自己要的材料。"', next:'ch1_pile', score:-12 }
 ], regulation:{ title:'整治形式主义', article:'为基层减负', content:'严肃纠治文件会议数量多效果差、以总结和推进工作为名随意向基层派任务、多头重复要材料等问题。切实减轻基层负担，让基层干部把更多精力用到服务群众和抓落实上。' }};
 
-S.ch1_simplify = { chapter:1, bg:'bg_grassroots.jpg', dialogues:[
+S.ch1_simplify = { chapter:1, bg:'bg_grassroots_happy.jpg', dialogues:[
   { text:'肖明花了一整天时间梳理材料需求，将12份材料整合为5份，统一了数据口径。', type:'narration' },
   { speaker:'陈主任', text:'（基层网点来电）肖总，这次的材料要求清晰多了，不用重复填报了。谢谢您体谅我们基层！', type:'dialogue' },
   { speaker:'肖明', text:'应该的，陈主任。基层同志够忙的了，我们不能再添乱。', type:'dialogue' }
@@ -108,7 +108,7 @@ S.ch2_fake = { chapter:2, bg:'bg_inspection.jpg', dialogues:[
   { text:'检查组走后，一位基层员工私下拍了照片发到了内部论坛。真相，迟早会浮出水面。', type:'narration' }
 ], next:'ch2_s2' };
 
-S.ch2_s2 = { chapter:2, bg:'bg_ceremony.jpg', dialogues:[
+S.ch2_s2 = { chapter:2, bg:'bg_office_zhao.jpg', dialogues:[
   { text:'又过了一周，赵磊找到肖明。', type:'narration' },
   { speaker:'赵磊', text:'老肖，王总的意思，想在年底前搞一个"服务之星"评比表彰活动，再创建一个"合规示范单位"。这样年终汇报的时候有亮点。', type:'dialogue' },
   { speaker:'肖明', text:'（这种评比表彰活动，按规定需要上级批准才能开展……）赵磊，这个活动报批了吗？', type:'thought' },
@@ -149,14 +149,14 @@ S.ch3_simple = { chapter:3, bg:'bg_wedding.jpg', dialogues:[
   { text:'婚礼当天，简朴而温馨。同事们纷纷点赞："肖总带头移风易俗，这才是新风尚。"', type:'narration' }
 ], next:'ch3_s2' };
 
-S.ch3_lavish = { chapter:3, bg:'bg_wedding.jpg', dialogues:[
+S.ch3_lavish = { chapter:3, bg:'bg_wedding_lavish.jpg', dialogues:[
   { text:'婚礼那天，酒席摆了整整三十五桌。茅台酒、中华烟堆满了桌子。', type:'narration' },
   { speaker:'肖明', text:'（看着宾客名单里好几个业务合作方的名字，心里咯噔一下）怎么这些人也来了……', type:'thought' },
   { text:'几个合作方老板借着喝喜酒的名义，塞来了厚厚的红包。肖明推辞不掉，最终收下了近十万元的礼金。', type:'narration' },
   { speaker:'刘芳', text:'（晚上数着礼金，面带忧色）这些钱……咱能收吗？', type:'dialogue' }
 ], next:'ch3_s2' };
 
-S.ch3_s2 = { chapter:3, bg:'bg_restaurant.jpg', dialogues:[
+S.ch3_s2 = { chapter:3, bg:'bg_office_discuss.jpg', dialogues:[
   { text:'下周一。外地一家再保险公司来洽谈业务合作，肖明负责接待。', type:'narration' },
   { speaker:'赵磊', text:'老肖，我在"锦绣华庭"订了个包间，点了鲍鱼龙虾套餐，人均800。对方是大客户，不能怠慢。', type:'dialogue' },
   { speaker:'肖明', text:'人均800？公务接待标准不是人均不超过150吗？', type:'dialogue' },
@@ -190,7 +190,7 @@ S.ch4_s1 = { chapter:4, bg:'bg_gift.jpg', dialogues:[
   { text:'笑纳收下："张总太客气了，那我就不见外了。"', next:'ch4_accept', score:-12 }
 ], regulation:{ title:'廉洁纪律', article:'收送礼品礼金', content:'紧盯违规收送高档烟酒茶、礼品礼金、名贵特产等问题。党员干部不得收受可能影响公正执行公务的礼品、礼金和有价证券等财物，违者视情节给予警告直至开除党籍处分。' }};
 
-S.ch4_return = { chapter:4, bg:'bg_office_xiao.jpg', dialogues:[
+S.ch4_return = { chapter:4, bg:'bg_office_sunset.jpg', dialogues:[
   { speaker:'张总', text:'（尴尬地笑了笑）肖总您这……', type:'dialogue' },
   { speaker:'肖明', text:'张总，咱们合作靠的是专业和诚信，不是靠这些。您把东西拿回去，有好的合作方案随时可以谈。', type:'dialogue' },
   { text:'张总走后，肖明在办公室坐了很久。窗外，夕阳把天边染成金红。他知道自己做对了。', type:'narration' }
@@ -202,7 +202,7 @@ S.ch4_accept = { chapter:4, bg:'bg_gift.jpg', dialogues:[
   { text:'但他不知道，公司的监控摄像头忠实地记录下了一切。', type:'narration' }
 ], next:'ch4_s2' };
 
-S.ch4_s2 = { chapter:4, bg:'bg_car.jpg', dialogues:[
+S.ch4_s2 = { chapter:4, bg:'bg_home_morning.jpg', dialogues:[
   { text:'周六上午。肖明的私家车送去保养了。', type:'narration' },
   { speaker:'刘芳', text:'明天是你妈生日，得去一趟超市买东西，没车怎么去？', type:'dialogue' },
   { speaker:'肖明', text:'（突然想到公司配给部门的那辆公务用车，钥匙就在办公桌抽屉里）', type:'thought' },
